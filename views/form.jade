@@ -1,0 +1,31 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/styleform.css')
+  body
+    block content
+      a#btn Back
+      center
+        form#form(method="POST" action="")
+          h1#top Add a #{device}
+          p
+            input#model(name="model" type="text" placeholder="Model")
+          input#brand(name="brand" type="text" placeholder="Brand/Manufacturer")
+          p
+            input#value(name="value" type="number" placeholder="Value $")
+          input#quantity(name="quantity" type="number" placeholder="Quantity")
+          p
+            input(type="submit" style="width:40%; cursor:pointer; background-color:white; border:black solid 1px; padding:1%;")
+name
+      script(text="text/javascript").
+        if(document.getElementById('top').innerText == 'Add a Phone'){
+          document.getElementById('btn').href = '/phone'
+        }
+        if(document.getElementById('top').innerText == 'Add a Tablet'){
+          document.getElementById('btn').href = '/tablet'
+        }
+        if(document.getElementById('top').innerText == 'Add a Laptop'){
+          document.getElementById('btn').href = '/laptop'
+        }
+

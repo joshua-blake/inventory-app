@@ -1,0 +1,40 @@
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style2.css')
+  body
+    block content
+    a#back(href="/") Back
+
+    center
+      h1#topper #{title_top}
+    
+    a(id="a_link")
+      div.cont#cont1
+        h1#titler Add #{title_top}
+        img#add_img(src="https://www.shareicon.net/data/512x512/2015/10/30/664158_add_512x512.png")
+    
+    a(id="view_link")
+      div.cont#cont2(style="color:white;")
+        h1 View all #{title_top}
+        img#add
+
+    script(type="text/javascript").
+      if (document.getElementById('titler').innerText == "Add Laptops"){
+        document.getElementById('add').src = 'https://i.ibb.co/w4k1m3S/laptopupload.png'
+        document.getElementById('add').style = 'width:70%;'
+        document.getElementById('a_link').href = 'laptop/add'
+        document.getElementById('view_link').href = 'laptop/view/all'
+      }
+      else if(document.getElementById('titler').innerText == "Add Phones"){
+        document.getElementById('add').src = 'https://mockuphone.com/static/images/devices/apple-iphone5c-blue-side1.png'
+        document.getElementById('add').style = 'width:80%;'
+        document.getElementById('a_link').href = 'phone/add'
+        document.getElementById('view_link').href = 'phone/view/all'
+      }
+      else{
+        document.getElementById('add').src = 'https://images.vexels.com/media/users/3/127704/isolated/preview/5d943e8bfc31f753b94aee72cde379f1-flat-tab-device-icon-by-vexels.png'
+        document.getElementById('add').style = 'width:80%;'
+        document.getElementById('a_link').href = 'tablet/add'
+        document.getElementById('view_link').href = 'tablet/view/all'
+      }

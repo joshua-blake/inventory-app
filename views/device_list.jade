@@ -1,0 +1,25 @@
+link(rel='stylesheet', href='/stylesheets/stylelists.css')
+link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet")
+block content
+  h1#title= title
+  a#backbtn Back
+  table
+    each device in device_list
+      tr
+        td
+          a(href=device.url) #{device.model} 
+          |  (#{device.brand})
+
+    else
+      li There are no devices.
+
+  script(type="text/javascript").
+    if(document.getElementById('title').innerText == 'Smartphones'){
+      document.getElementById('backbtn').href = '/phone'
+    }
+    if(document.getElementById('title').innerText == 'Tablets'){
+      document.getElementById('backbtn').href = '/tablet'
+    }
+    if(document.getElementById('title').innerText == 'Laptops'){
+      document.getElementById('backbtn').href = '/laptop'
+    }

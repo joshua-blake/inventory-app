@@ -1,0 +1,39 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: linear-gradient(90deg, #db00d0, #e40000);
+  color:white;
+}
+
+a {
+  color:white;
+}
+a:link {
+  text-decoration: none;
+}
+.container{
+  border:2px white solid;
+  width:30%;
+  text-align:center;
+}
+#tablets{
+  right:2.5%;
+  position: absolute;
+  top:9.5%;
+}
+#laptops{
+  left:2.5%;
+  position: absolute;
+}
+img{
+  width:100%;
+}
+#laptopimg{
+  width:87%;
+}
+#tabletimg{
+  width:99%;
+}
+#err{
+  color:red;
+  font-size:5.7em;
+}

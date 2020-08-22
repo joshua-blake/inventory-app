@@ -1,0 +1,32 @@
+body{
+  font-family: 'Roboto', sans-serif;
+}
+table {
+  font-size:1.8em;
+  background-color:white;
+  padding:0.4em;
+}
+#detail{
+  width:30%;
+  background-color:white;
+  border:none;
+  padding:1em;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 7px 0px rgba(66, 66, 66, 0.75);
+  margin-top:6%;
+  position: absolute;
+}
+body{
+  background-image: linear-gradient(90deg, #3a00db, #af00e4);
+}
+#backbtn{
+  border-radius:0; 
+  background-color:transparent; 
+  color:white; 
+  border: 2px white solid;
+  font-size:2em;
+  cursor: pointer;
+  text-decoration: none;
+  padding:0.2em;
+}

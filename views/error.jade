@@ -1,0 +1,5 @@
+extends layout
+
+block content
+  h1#err= 'Sorry, ' + message + ' '+ error.status
+  h2 #{error.stack}

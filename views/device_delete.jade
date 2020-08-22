@@ -1,0 +1,14 @@
+extends layout
+block content
+  h1 #{title}
+    div(style='margin-left:20px;margin-top:20px')
+
+    p Do you really want to delete this Device?
+    h1#hidden(style="display:none;") #{id}
+    form(method='POST' action='')
+      div.form-group
+      style=".btn{background7-color:transparent; cursor:pointer; color:white; border:2px white solid; border-radius:none; font-size:2.2em;}"
+      button.btn.btn-primary(type='submit') Delete
+
+  
+    

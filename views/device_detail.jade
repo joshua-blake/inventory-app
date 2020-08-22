@@ -1,0 +1,31 @@
+link(rel='stylesheet', href='/stylesheets/stylelists.css')
+link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet")
+block content
+a#backbtn(style="margin-top:0.43em; position:absolute;") Back
+div#detail
+    h1 #{brand} #{model}
+    h2#type Device Type : #{title}
+    h2 Device ID : #{id}
+    h2 Value : $#{value}
+    p#links(style="display:none;") #{url}
+            hr
+    p
+        a#linker(value=) Delete Device
+script(type="text/javascript").
+    document.getElementById('linker').href = document.getElementById('links').innerText+'/delete'
+    var btn = document.getElementById('backbtn');
+    var type = document.getElementById('type');
+    if(type.innerText == 'Device Type : Tablet'){
+        btn.innerText = 'All Tablets'
+        btn.href = '/tablet/view/all/'
+    }
+    if(type.innerText == 'Device Type : Phone'){
+        btn.innerText = 'All Phones'
+        btn.href = '/phone/view/all/'
+    }
+
+    if(type.innerText == 'Device Type : Laptop'){
+        btn.innerText = 'All Laptops'
+        btn.href = '/laptop/view/all/'
+    }
+    
