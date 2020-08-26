@@ -82,7 +82,7 @@ exports.laptop_detail = function (req, res, next) {
 };
 
 
-exports.phone_create_post = function(req, res) {
+exports.phone_create_post = function(req, res, next) {
     var phone = new Phone({
         model : req.body.model,
         brand : req.body.brand,
@@ -95,7 +95,7 @@ exports.phone_create_post = function(req, res) {
             })
         };
 
-exports.tablet_create_post = function(req, res) {
+exports.tablet_create_post = function(req, res, next) {
     var tablet = new Tablet({
         model : req.body.model,
         brand : req.body.brand,
@@ -108,7 +108,7 @@ exports.tablet_create_post = function(req, res) {
             res.redirect(tablet.url);
         })
 };
-exports.laptop_create_post = function(req, res) {
+exports.laptop_create_post = function(req, res, next) {
     var laptop = new Laptop({
         model : req.body.model,
         brand : req.body.brand,
